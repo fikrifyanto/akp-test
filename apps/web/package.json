@@ -18,6 +18,10 @@
     "react-router": "^7.5.3"
   },
   "devDependencies": {
+    "@emnapi/core": "^1.4.3",
+    "@emnapi/runtime": "^1.4.3",
+    "@emnapi/wasi-threads": "^1.0.2",
+    "@tybys/wasm-util": "^0.9.0",
     "@react-router/dev": "^7.5.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
