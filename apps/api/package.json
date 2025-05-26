@@ -1,14 +1,15 @@
 {
   "name": "api",
+  "type": "module",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "lint": "eslint ./src"
   },
   "dependencies": {
     "hono": "^4.7.10"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/bun": "latest",
     "eslint": "^9.27.0",
     "typescript": "^5.8.2"
