@@ -7,6 +7,10 @@
     "hono": "^4.7.10"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/bun": "latest",
+    "eslint": "^9.27.0",
+    "typescript": "^5.8.2"
   }
 }
