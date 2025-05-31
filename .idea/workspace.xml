@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a90ce65c-ca24-49aa-a73c-0633f79ba13f" name="Changes" comment="Add start command">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="a90ce65c-ca24-49aa-a73c-0633f79ba13f" name="Changes" comment="Add postgresql">
+      <change beforePath="$PROJECT_DIR$/apps/api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +125,7 @@
       <workItem from="1748246355372" duration="3132000" />
       <workItem from="1748249515365" duration="4530000" />
       <workItem from="1748254211728" duration="3486000" />
-      <workItem from="1748701450612" duration="9366000" />
+      <workItem from="1748701450612" duration="10087000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -187,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748712009521</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add postgresql">
+      <option name="closed" value="true" />
+      <created>1748713048531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748713048531</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +205,7 @@
     <MESSAGE value="Fix hono" />
     <MESSAGE value="Reinstall apps/web and implement docker" />
     <MESSAGE value="Add start command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add start command" />
+    <MESSAGE value="Add postgresql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add postgresql" />
   </component>
 </project>

@@ -25,4 +25,4 @@ COPY apps/api/src ./src
 EXPOSE 3001
 
 # Command untuk menjalankan aplikasi Hono dengan Bun
-CMD ["bun", "--hot", "src/index.ts"]
+CMD ["bun", "run", "src/index.ts"]
