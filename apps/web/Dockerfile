@@ -1,22 +1,35 @@
-FROM node:20-alpine AS development-dependencies-env
-COPY . /app
-WORKDIR /app
-RUN npm ci
+# Use Bun as base image
+FROM oven/bun:latest AS base
 
-FROM node:20-alpine AS production-dependencies-env
-COPY ./package.json package-lock.json /app/
+# Set working directory
 WORKDIR /app
-RUN npm ci --omit=dev
 
-FROM node:20-alpine AS build-env
-COPY . /app/
-COPY --from=development-dependencies-env /app/node_modules /app/node_modules
-WORKDIR /app
-RUN npm run build
+# Copy only the necessary files for dependency installation
+COPY package.json bun.lock ./
+COPY apps/web/package.json ./apps/web/
 
-FROM node:20-alpine
-COPY ./package.json package-lock.json /app/
-COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
-WORKDIR /app
-CMD ["npm", "run", "start"]
+# Install only the dependencies needed for the web app
+# Use --frozen-lockfile to ensure consistent installs
+RUN bun install
+
+# Copy configuration files first (better for caching)
+COPY apps/web/tsconfig.json \
+     apps/web/react-router.config.ts \
+     apps/web/vite.config.ts \
+     ./apps/web/
+
+# Copy the rest of the application code
+COPY apps/web/app ./apps/web/app
+COPY apps/web/public ./apps/web/public
+
+# Set working directory to web directory
+WORKDIR /app/apps/web
+
+# Build the application
+RUN bun run build
+
+# Expose port 3000
+EXPOSE 3000
+
+# Command to run the application
+CMD ["bun", "run", "start"]
