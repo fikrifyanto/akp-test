@@ -43,12 +43,34 @@ pnpm build
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To develop all apps and packages locally, run the following command:
 
 ```
 cd my-turborepo
 pnpm dev
 ```
+
+### Docker Development with Hot Reloading
+
+This project supports Docker-based development with hot reloading, allowing you to make changes to your source code without rebuilding containers.
+
+To start development with Docker:
+
+```
+docker-compose up
+```
+
+This will:
+- Start the API service on http://localhost:3001
+- Start the web service on http://localhost:3000
+- Mount source code directories as volumes for live code synchronization
+- Enable hot module reloading for both services
+
+When you make changes to the source code:
+- For API: Edit files in `apps/api/src` directory
+- For Web: Edit files in `apps/web/app` or `apps/web/public` directories
+
+The changes will be automatically detected and the applications will reload.
 
 ### Remote Caching
 

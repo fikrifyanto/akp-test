@@ -7,8 +7,11 @@
     "lint": "eslint ./src"
   },
   "dependencies": {
+    "@prisma/client": "^6.8.2",
     "hono": "^4.7.10",
-    "postgres": "^3.4.7"
+    "postgres": "^3.4.7",
+    "prisma": "^6.8.2",
+    "zod": "^3.25.47"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

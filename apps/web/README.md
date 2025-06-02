@@ -44,9 +44,42 @@ npm run build
 
 ## Deployment
 
+### Docker Development with Hot Reloading
+
+This web service is configured to support hot reloading when running in Docker. This means you can make changes to your source code and see them reflected immediately without having to rebuild the Docker container.
+
+#### How it works
+
+The Docker setup uses volume mounting to sync your local source code with the container:
+
+```yaml
+volumes:
+  - ./apps/web/app:/app/apps/web/app
+  - ./apps/web/public:/app/apps/web/public
+```
+
+And it runs the development script with hot module reloading:
+
+```yaml
+command: bun run dev
+```
+
+#### Development Workflow
+
+1. Start the services with Docker Compose from the project root:
+   ```bash
+   docker-compose up
+   ```
+
+2. Make changes to your source code in the `apps/web/app` or `apps/web/public` directories
+
+3. The changes will be automatically detected and the application will reload
+
+4. View the web application at http://localhost:3000
+
 ### Docker Deployment
 
-To build and run using Docker:
+To build and run using Docker for production:
 
 ```bash
 docker build -t my-app .
