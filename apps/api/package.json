@@ -4,7 +4,9 @@
   "scripts": {
     "start": "bun run src/index.ts",
     "dev": "bun run --hot src/index.ts",
-    "lint": "eslint ./src"
+    "lint": "biome lint ./src",
+    "format": "biome format --write ./src",
+    "check": "biome check ./src"
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
@@ -14,10 +16,8 @@
     "zod": "^3.25.47"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/bun": "latest",
-    "eslint": "^9.27.0",
     "typescript": "^5.8.2"
   }
 }
