@@ -1,0 +1,4 @@
+[build]
+# Configuration for the Web service
+builder = "DOCKERFILE"
+dockerfilePath = "apps/web/Dockerfile"

@@ -1,0 +1,4 @@
+[build]
+# Configuration for the API service
+builder = "DOCKERFILE"
+dockerfilePath = "apps/api/Dockerfile"
