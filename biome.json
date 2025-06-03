@@ -21,7 +21,7 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2,
+    "indentWidth": 4,
     "lineWidth": 100
   },
   "javascript": {
@@ -32,6 +32,12 @@
     }
   },
   "files": {
-    "ignore": ["dist/**", "node_modules/**", "build/**", ".turbo/**"]
+    "ignore": [
+      "dist/**",
+      "node_modules/**",
+      "build/**",
+      ".turbo/**",
+      "src/generated/prisma/**"
+    ]
   }
 }

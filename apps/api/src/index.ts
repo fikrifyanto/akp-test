@@ -1,15 +1,15 @@
-import { Hono } from 'hono'
-import { trpcServer } from '@hono/trpc-server'
-import { appRouter } from './router'
+import { Hono } from "hono";
+import { trpcServer } from "@hono/trpc-server";
+import { appRouter } from "./router";
 
-const app = new Hono()
+const app = new Hono();
 
 app.use(
-    '/trpc/*',
+    "/trpc/*",
     trpcServer({
         router: appRouter,
     })
-)
+);
 
 export default {
     port: 3001,
